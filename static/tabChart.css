@@ -1,0 +1,145 @@
+
+/* Parametre graphique et tableau */
+.paramGraph-tab {
+  display: block;
+  width: 100%;
+  height: 212px;
+}
+
+#titredivsoft, #titredivlogin {
+	color : rgb(207, 204, 33);
+}
+
+  /* Parametre graphique */
+    .param-graph {   
+      display: inline;   
+      float: left; 
+      margin-left: 10%;
+      margin-right: 10px; 
+      width: 280px;
+      height: 200px;
+      padding : 5px 5px 5px 7px;
+      border-width : 1px;
+      border-style : solid;
+      border-color :  rgb(255, 255, 255);
+      background: #1d011056;
+    }
+
+    .param-graph:hover
+    {  
+      box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    }
+
+    .rd-bouton {
+      width: 110px;
+      height: 25px;
+      margin-left: auto;
+      margin-right: auto; 
+      text-align: left;
+    }
+
+    .number {
+      width: 7em;
+    }
+    .number:-moz-read-only { 
+      color: rgb(134, 134, 134);
+      font-style: italic;
+    }
+    .number:read-only { 
+      color: rgb(134, 134, 134); 
+      font-style: italic;
+    }
+  /*-----*/
+
+  /* Tableaux */
+    .tabdiv
+    {  
+      display: inline;
+      float: left;
+      margin-left: 10px;
+      margin-right: 15%;
+      width: 42%;
+      height: 200px;
+      padding : 5px 5px 5px 7px;
+      overflow : auto;
+      border-width : 1px;
+      border-style : solid;
+      border-color :  rgb(255, 255, 255);
+      background: #1d011056;
+    }
+
+    #tabdivexclu {
+      margin-left: 18%;
+      margin-right: 50%;
+      width: 230px;
+      height: 400px;
+      background: #1d011056;
+    }
+    
+    .tabdiv:hover
+    {  
+      box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    }
+
+    table
+    {
+        border-collapse: collapse;
+    }
+
+    td, th, tr 
+    {
+        border: 1px solid rgb(255, 255, 255);
+    }
+
+    .ligTabMax{
+      color : rgb(109, 201, 255);
+    }
+
+    /* Police du tableau */
+      th
+      {
+          font-size: 12px;
+          text-align: center;
+          color : rgb(207, 204, 33);
+      }
+      td 
+      {
+          font-size: 12px;
+          text-align: right;
+      }
+      .ligTabX
+      {
+          font-size: 12px;
+          text-align: left;
+      }
+
+      .ligTab {
+        font-size: 12px;
+        text-align: right;
+      }
+
+      .ligTabNonExclu {
+        font-size: 12px;
+        color : rgb(255, 255, 255);
+      }
+      .ligTabExclu {
+        font-size: 12px;
+        color : rgb(252, 0, 0);
+      }
+    /*-----*/
+  /*-----*/    
+/*-----*/
+
+/* Chart */
+  #chartdivsoft, #chartdivlogin {
+    width: 100%;
+    height: 400px;
+  }
+/*-----*/
+
+/* Messages */
+  .calcul-en-cours {
+    text-align: center; 
+    color: rgb(207, 204, 33);
+  }
+/*-----*/
