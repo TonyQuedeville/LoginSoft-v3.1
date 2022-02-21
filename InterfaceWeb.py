@@ -26,7 +26,7 @@ class InterfaceWeb():
         # Fichier source
         # self.path = "Users/mr/PycharmProjects/Login Soft v3.1/data"
         self.path = os.getcwd()+"/data"
-        self.fichier_source = ["PEDSoftActivity1.log","PEDSoftActivity2.log", "PEDSoftActivity3.log"]
+        self.fichier_source = ["SoftActivity1.csv","SoftActivity2.csv", "SoftActivity3.csv"]
         self.Fichier_softExclu = "SoftExclu.csv"
         
         if os.path.exists(self.path + "/" + self.fichier_source[0]):
