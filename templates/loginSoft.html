@@ -1,0 +1,149 @@
+        <!-- Styles -->
+        <link rel="stylesheet" type="text/css" href="/static/pageWeb.css">
+        <link rel="stylesheet" type="text/css" href="/static/tabChart.css">
+        
+        <!-- HTML -->
+        <!-- NAV -->
+        <header id="header" role="banner" class="main-header">
+                <div class="header-inner">         
+                        <div class="header-logo">
+                                <img src="/static/LogoMiniature.png" alt="Login Soft" width="47" height="47" title="Calcul de statistique sur les connexions aux logiciels développés par Flexi-France">
+                        </div>
+                        
+                        <nav class="header-nav">    
+                                <label id="login-soft">Login Soft v3.1</label>                            
+                                <ul>
+                                        <li><a id="calculer">Calculer</a></li>
+                                        <label>Exporter : </label>
+                                        <select name="exportation" id="exportation">
+                                                <option selected="selected"></option>
+                                                <option>Exporter dans un fichier Excel</option>
+                                                <option>Exporter dans un fichier CSV </option>
+                                                <option>Exporter dans un fichier JSON</option>
+                                        </select> 
+					<li><a id="exclure">Exclure Logiciel</a></li>
+                                        <label id=result-export></label>                                                                              
+                                </ul>
+                        </nav>         
+                </div>
+        </header>
+
+        <!-- Filtres -->
+        <div id="param"> 
+                <form action="." method="POST"> 
+                        <div id=filtres></div>                               
+                </form>
+        </div>
+
+        <!-- Logiciel -->
+        <div id="div-logiciel">
+                <div>       
+                        <h1 id="titresoft">Nombre de connexions logiciels : <label class="x" id="titredivsoft"></label></h1>
+                </div>
+                <div id="div-result-soft">
+                        <div id="div-soft" class="paramGraph-tab">
+                                <div id="param-graph-soft" class="param-graph">
+                                        <label >Echelle de valeurs graphique :</label>
+                                        <div class="y-limite"> 
+                                                <label for="y-min">mini:</label>
+                                                <input type="number" class="number" id="y-min-soft" name="y-min-soft" min="0" max="0" value="0">
+                                                <label for="y-max">maxi:</label>
+                                                <input type="number" class="number" id="y-max-soft" name="y-max-soft" min="0" max="0">
+                                        </div>
+                                        <p></p>
+
+                                        <label >Césure graphique :</label>
+                                        <div class="rd-bouton">
+                                                <input type="radio" id="auto-soft" name="cesure-soft" value="auto" checked>
+                                                <label for="auto">automatique</label>
+                                        </div>
+                                        
+                                        <div class="rd-bouton">
+                                                <input type="radio" id="aucune-soft" name="cesure-soft" value="aucune">
+                                                <label for="aucune">aucune</label>
+                                        </div>
+                                        
+                                        <div class="rd-bouton"> 
+                                                <input type="radio" id="perso-soft" name="cesure-soft" value="perso">
+                                                <label for="perso">personalisée</label>
+                                        </div>
+                                        <p></p>
+                                        <div class="y-limite"> 
+                                                <label for="cesure-min">mini:</label>
+                                                <input type="number" class="number" id="cesure-min-soft" name="cesure-min-soft" min="0" max="0" readonly="true">
+                                                <label for="cesure-max">maxi:</label>
+                                                <input type="number" class="number" id="cesure-max-soft" name="cesure-max-soft" min="0" max="0" readonly="true">
+                                        </div>
+                                </div>
+                                <div id="tabdivsoft" class="tabdiv"></div>
+                        </div>
+                        <label id=legende-logiciel></label>
+                        <div class="chartdiv" id="chartdivsoft"></div>
+                </div>
+        </div>
+        
+        <!-- Utilisateur -->
+        <div id="div-utilisateur">
+                <div>
+                        <h1 id="titrelogin">Nombre de connexions utilisateurs : <label class="x" id="titredivlogin"></label></h1>
+                </div>
+        
+                <div id="div-result-login"></div>
+                        <div id="div-login" class="paramGraph-tab">
+                                <div id="param-graph-login" class="param-graph">
+                                        <label >Echelle de valeurs graphique :</label>
+                                        <div class="y-limite"> 
+                                                <label for="y-min">mini:</label>
+                                                <input type="number" class="number" id="y-min-login" name="y-min-login" min="0" max="0" value="0">
+                                                <label for="y-max">maxi:</label>
+                                                <input type="number" class="number" id="y-max-login" name="y-max-login" min="0" max="0">
+                                        </div>
+                                        <p></p>
+
+                                        <label >Césure graphique :</label>
+                                        <div class="rd-bouton">
+                                                <input type="radio" id="auto-login" name="cesure-login" value="auto" checked>
+                                                <label for="auto">automatique</label>
+                                        </div>
+                                        
+                                        <div class="rd-bouton">
+                                                <input type="radio" id="aucune-login" name="cesure-login" value="aucune">
+                                                <label for="aucune">aucune</label>
+                                        </div>
+                                        
+                                        <div class="rd-bouton"> 
+                                                <input type="radio" id="perso-login" name="cesure-login" value="perso">
+                                                <label for="perso">personalisée</label>
+                                        </div>
+                                        <p></p>
+                                        <div class="y-limite"> 
+                                                <label for="cesure-min">mini:</label>
+                                                <input type="number" class="number" id="cesure-min-login" name="cesure-min-login" min="0" max="0" readonly="true">
+                                                <label for="cesure-max">maxi:</label>
+                                                <input type="number" class="number" id="cesure-max-login" name="cesure-max-login" min="0" max="0" readonly="true">
+                                        </div>
+                                </div>
+                                <div id="tabdivlogin"  class="tabdiv"></div>
+                        </div>                
+                        <label id=legende-utilisateur></label>
+                        <div class="chartdiv" id="chartdivlogin"></div>
+                </div>
+        </div>
+
+        <div id="div-logiciel-exclu">
+                <h1>Logiciels exclus :</h1>
+                <div id="tabdivexclu"  class="tabdiv"></div>
+        </div>
+
+        <!-- Resources -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>        
+        <script src="https://www.amcharts.com/lib/4/themes/dark.js"></script>
+        <script src="/static/initPage.js"></script>
+        <script src="/static/tabChart.js"></script>
+        <script src="/static/logicielExclu.js"></script>
+        
+        
+        
